@@ -2,6 +2,7 @@ import { ReactComponent as SearchIcon } from 'assets/icon-search.svg';
 import { Button } from 'components/Button';
 
 import styles from './Search.module.scss';
+import {FormEvent} from "react";
 
 interface SearchProps {
   hasError: boolean,
@@ -13,7 +14,7 @@ type FormFields = {
 }
 
 export const Search = ({ hasError, onSubmit }: SearchProps) => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement & FormFields>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement & FormFields>) => {
     event.preventDefault();
     const text = event.currentTarget.username.value;
 

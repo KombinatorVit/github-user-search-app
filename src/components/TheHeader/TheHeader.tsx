@@ -5,7 +5,7 @@ import styles from './TheHeader.module.scss';
 export const TheHeader = () => (
   <div className={styles.header}>
     <div className={styles.logo}>
-      Разработчик
+      Разработчик Найдись!
     </div>
     <ThemeSwitcher />
   </div>
